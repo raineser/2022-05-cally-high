@@ -15,12 +15,29 @@ forge install
 
 ## Testing
 
+The original tests have been removed and replaced with critical vulnerabilities only.
+
+## Running Tests
+
+
+### `File: h1.t.sol`
+Requires mainnet forking 
+
 ```
-forge test
+forge test --fork-url <alchemy/infura URL> --match testStealFunds
+
 ```
 
-## Gas report
+### `File: h2.t.sol`
 
 ```
-forge test --gas-report
+forge test --match testInefficiency
+
+```
+
+### `File: h3.t.sol`
+
+```
+forge test --match testFakeBalance
+
 ```
